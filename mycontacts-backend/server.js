@@ -1,11 +1,13 @@
 //Import
 const express = require("express"); //Improt the Express module
 const errorHandler = require("./middleware/errorHandler");
+const connectDb = require("./config/dbConnection");
 const dotenv = require("dotenv").config(); //Import to access .env file
 
-
+connectDb();
 const app = express(); // Create an instance of an Express application
 const port = process.env.PORT || 5000;
+
 
 //built-in
 //When a request is received with a JSON payload, 

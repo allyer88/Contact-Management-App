@@ -1,0 +1,12 @@
+In package.json:
+Dependencies:
+- modemon: can automatically restart the server when we make any change
+Scripts section defines a set of commands that can be run using the npm run command.
+
+
+In .gitignore file:
+any files or directories listed in the .gitignore file will not be tracked by Git, and any changes to these files will not be staged for commit.
+
+In .env file:
+These environment variables can be used by your application to configure settings and store sensitive information, 
+such as API keys, database credentials, and other configuration details that /////*should not be hardcoded in your application's source code*/////
