@@ -10,3 +10,12 @@ any files or directories listed in the .gitignore file will not be tracked by Gi
 In .env file:
 These environment variables can be used by your application to configure settings and store sensitive information, 
 such as API keys, database credentials, and other configuration details that /////*should not be hardcoded in your application's source code*/////
+
+
+!apple means apple is null
+
+A JSON Web Token (JWT) consists of three parts:
+
+1. Header: Contains metadata about the token (e.g., the algorithm used for signing).
+2. Payload: Contains the claims or the data (e.g., the user's ID, username).
+3. Signature: The result of hashing the header and payload using a secret key and the signing algorithm.

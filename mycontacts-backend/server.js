@@ -15,6 +15,7 @@ const port = process.env.PORT || 5000;
 app.use(express.json());
 //a route handler for GET requests to the /api/contacts endpoint
 app.use("/api/contacts", require("./routes/contactRoutes"));
+app.use("/api/users", require("./routes/userRoutes"));
 //defined by ourself
 //middleware that parses the error to json
 //must place after app.use("/api/contacts", require("./routes/contactRoutes"));

@@ -19,8 +19,8 @@ const getContacts = asyncHandler(async(req, res)=>{
 const createContact = asyncHandler(async(req, res)=>{
     console.log("The request body is ", req.body);
     //destructuring assignments to extract values from objects and arrays and assign them to variables.
-    const {username, email} = req.body;
-    if(!username || !email){
+    const {name, email} = req.body;
+    if(!name || !email){
         //set status to error
         res.status(400);
         throw new Error("Please provide all fields");
