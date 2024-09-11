@@ -1,8 +1,10 @@
 const express = require("express");
 const router = express.Router();
 const {getContacts, createContact, getContact, updateContact, deleteContact} = require("../controllers/contactController");
+const validateToken = require("../middleware/validateTokenHandler");
 
-
+//all the route will be validate first(private route)
+router.use(validateToken);
 
 router.route("/").get(getContacts).post(createContact);
 //router.route("/").post(createContact); make code clean => two lines into one

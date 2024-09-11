@@ -63,7 +63,7 @@ const loginUser = asyncHandler(async (req, res) => {
         }, //ACCESS_TOKEN_SECRET is used to generate the signature(see note) in the JWT. 
             process.env.ACCESS_TOKEN_SECRET,
             {//How long shoule the access token secret expire
-                expiresIn: "1m"
+                expiresIn: "1h"
             });
         res.status(200).json({ accessToken });
     } else {
@@ -76,9 +76,7 @@ const loginUser = asyncHandler(async (req, res) => {
 //@route GET /api/users/currentInfo
 //@access private
 const currentUserInfo = asyncHandler(async (req, res) => {
-    res.json({
-        message: "Current user Information"
-    });
+    res.json(req.user);
 });
 
 //Importing and exporting multiple named modules using {}.
